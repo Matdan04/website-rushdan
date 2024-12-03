@@ -53,31 +53,40 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ children, className }) => {
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(true);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-     ([entry]) => setIsInView(entry.isIntersecting),
-     { threshold: 0.1 }
-   );
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setIsInView(true);
+          setHasAnimated(true);
+        }
+      },
+      { 
+        threshold: 0.2,
+        rootMargin: '0px 0px -15% 0px'
+      }
+    );
 
-   const element = document.querySelector('.card');
-   if (element) observer.observe(element);
+    const element = document.querySelector('.card');
+    if (element) observer.observe(element);
 
-   return () => observer.disconnect();
- }, []);
+    return () => observer.disconnect();
+  }, [hasAnimated]);
 
- return (
-   <motion.div
-     className={`card ${className}`}
-     initial={{ opacity: 0, y: 50 }}
-     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-     transition={{ duration: 0.6, ease: "easeOut" }}
-     whileHover={{ scale: 1.02 }}
-   >
-     {children}
-   </motion.div>
- );
+  return (
+    <motion.div
+      className={`card ${className}`}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{ scale: 1.02 }}
+    >
+      {children}
+    </motion.div>
+  );
 };
 
 export const ProjectsSection = () => {
