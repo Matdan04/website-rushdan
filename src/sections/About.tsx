@@ -111,7 +111,7 @@ export const AboutSection = () => {
         <SectionHeader
           title="A Glimpse Into My World"
           eyebrow="About me"
-          description="I'm a software engineer with a passion for building products that are both functional and aesthetically pleasing. I'm a full-stack developer with a focus on building scalable and maintainable applications."
+          description="I'm an experienced Mobile and Web Developer adept at crafting dynamic, scalable, and visually appealing applications using Flutter,NextJS and React. Committed to delivering innovative, user-centric solutions that drive digital transformation. Skilled in the full lifecycle of application development, from conceptualization to implementation and support. Proficient in integrating complex systems, including Maximo software customization and REST API integration. Dedicated to staying ahead of industry trends and contributing to the growth of the Flutter, NextJS and React ecosystem."
         />
         <div className="mt-8 sm:mt-12 md:mt-20 flex flex-col gap-4 sm:gap-6 md:gap-8">
           <div className="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 md:grid-cols-5">
