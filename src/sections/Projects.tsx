@@ -6,6 +6,7 @@ import MyIMUDashboard from "../assets/images/MyIMUDashboard.png";
 import TEIS from "../assets/images/TEIS.jpg";
 import Link from "next/link";
 import Image from "next/image";
+import erms from "../assets/images/erms.png";
 import CheckIcon from "../assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "../assets/icons/arrow-up-right.svg";
 import grainImage from "../assets/images/grain.jpg";
@@ -64,6 +65,25 @@ const portfolioProjects = [
     ],
     image: MyIMUDashboard,
     link :"https://stag-myimu.imu.edu.my/school-administration/time-table"
+
+  },
+  {
+    company: "International Medical University",
+    year: "2025",
+    title: "Exam Result Management System 2.0",
+    results: [
+      {
+        title: "Successfully developed a modular Domain-Driven Design (DDD) exam results management system using Laravel with Blade components and Tailwind CSS, enabling seamless integration across different academic schools with enhanced calculation mechanisms for faster result processing"
+      },
+      {
+        title: "Built a scalable and robust examination results calculation platform featuring reusable core components (TopicBased, ModuleBased, FixedDict) that streamlined the exam marking workflow and improved processing efficiency for academic institutions"
+      },
+      {
+        title: "Implemented a comprehensive results management system with responsive frontend using Laravel backend architecture, Blade templating, and Tailwind CSS styling, providing flexible module deployments and establishing foundation for future-proof features including alumni access and mobile integration"
+      }
+    ],
+    image: erms,
+    // link :"https://stag-myimu.imu.edu.my/school-administration/time-table"
 
   }
 ];
