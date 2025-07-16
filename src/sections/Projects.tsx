@@ -183,9 +183,10 @@ export const ProjectsSection = () => {
                   style={{ background: `url(${grainImage.src})` }}
                 />
 
-                <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+                {/* Remove lg:grid and use flex-col for vertical stacking */}
+                <div className="flex flex-col gap-8">
                   <motion.div
-                    className="lg:pb-16"
+                    // Remove grid-specific padding
                     initial={{ x: -50, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -236,18 +237,18 @@ export const ProjectsSection = () => {
                     )}
                   </motion.div>
 
+                  {/* Move image below the details/results */}
                   <motion.div
-                    className="relative lg:pb-16"
-                    initial={{ x: 50, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
+                    className="relative"
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: index * 0.2 }}
                   >
                     {project.image && (
                       <Image
                         src={project.image}
                         alt={project.title}
-                        className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none
-                                rounded-lg shadow-xl hover:scale-105 transition-transform duration-300"
+                        className="w-full h-auto rounded-xl shadow-xl object-cover"
                         loading="lazy"
                         placeholder="blur"
                         blurDataURL={project.image.src}
