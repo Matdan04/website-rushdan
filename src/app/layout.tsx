@@ -4,6 +4,7 @@ import "./globals.css";
 import "./redesign.css";
 import "./experience.css";
 import "./brand.css";
+import "./projects.css";
 import { twMerge } from "tailwind-merge";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
