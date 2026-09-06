@@ -1,0 +1,11 @@
+@media (max-width: 520px) {
+  .brand {
+    font-size: 13px;
+    letter-spacing: -0.035em;
+  }
+
+  .nav-links a {
+    padding-inline: 4px;
+    font-size: 9px;
+  }
+}

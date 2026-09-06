@@ -27,7 +27,7 @@ const experience=[
 const reveal={initial:{opacity:0,y:24},whileInView:{opacity:1,y:0},viewport:{once:true,amount:.18},transition:{duration:.55}};
 
 export default function Home(){return <main className="site-shell">
-  <nav className="floating-nav" aria-label="Main navigation"><Link href="#home" className="brand">RA<span>.</span></Link><div className="nav-links"><Link href="#work">Work</Link><Link href="#experience">Experience</Link><Link href="#about">About</Link><Link href="#contact">Contact</Link></div></nav>
+  <nav className="floating-nav" aria-label="Main navigation"><Link href="#home" className="brand">Rushdan Ashraf<span>.</span></Link><div className="nav-links"><Link href="#work">Work</Link><Link href="#experience">Experience</Link><Link href="#about">About</Link><Link href="#contact">Contact</Link></div></nav>
 
   <section id="home" className="hero container"><div className="spotlight spotlight-one"/><div className="spotlight spotlight-two"/><div className="hero-grid"/>
     <motion.div className="hero-copy" initial={{opacity:0,y:24}} animate={{opacity:1,y:0}} transition={{duration:.7}}><div className="availability"><i/> Available for new opportunities</div><p className="eyebrow">Product engineer · Senior full-stack engineer</p><h1>I engineer products that are <span>scalable, secure, and human.</span></h1><p className="hero-lede">I’m Rushdan Ashraf, building enterprise platforms, AI-driven systems, and polished digital experiences end to end.</p><div className="hero-actions"><Link className="button button-primary" href="#work">Explore my work <FiArrowUpRight/></Link><Link className="button button-ghost" href="#contact">Let’s connect</Link></div></motion.div>
