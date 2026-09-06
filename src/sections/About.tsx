@@ -14,7 +14,6 @@ import {
   SiNodedotjs,
   SiPython,
   SiDocker,
-  SiAmazon,
   SiGithub,
   SiGitlab,
   SiJira,
@@ -22,6 +21,7 @@ import {
   SiFlutter,
   SiHtml5,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
 import { CardHeader } from "@/components/CardHeader";
@@ -62,7 +62,7 @@ const toolboxItems = [
   },
   {
     title: "AWS",
-    iconType: SiAmazon,
+    iconType: FaAws,
   },
   {
     title: "GitHub",
